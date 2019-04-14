@@ -134,6 +134,7 @@ public:
     void nonveg();
     void veg();
 
+
 };
 void food::nonveg()
 {
@@ -191,7 +192,45 @@ void food::fooddata()
              break;
            }
 }
+class travel
+{
+    int t,x,q;
+    char ch[20];
+    public:
 
+    void traveldata();
+};
+void travel::traveldata()
+{
+
+    cout<<"DO YOU WANT ROAM IN OUR CITY";
+    cin>>ch;
+    cout<<"WELL THAT'S A GREAT IDEA "<<endl;
+    cout<<"WHICH PLACES DO YOU WANT TO VISIT  \n 1.TAJ PALACE 2.TEA GARDEN 3.MUSEUM"<<endl;
+    cin>>x;
+    switch(x)
+    {
+        case 1:cout<<"OK!! WOULD YOU LIKE TO TAKE A CAB";
+        char ch[20];
+        cin>>ch;
+        fflush(stdin);
+        cout<<"WHAT WOULD YOU LIKE TO TAKE \n 1.MINI 2.MICRO 3.SEDAN 4.SUV"<<endl;
+        cin>>q;
+        switch(q)
+    {
+
+        case 1:cout<<"CHARGES FOR MINI :30RS/KM"<<endl;
+        break;
+        case 2:cout<<"CHARGES FOR MICRO :40RS/KM"<<endl;
+        break;
+        case 3:cout<<"CHARGES FOR SEDAN :50RS/KM"<<endl;
+        break;
+        case 4:cout<<"CHARGES FOR SUV :70RS/KM"<<endl;
+        break;
+    }
+
+    }
+}
 
 
 
@@ -203,6 +242,8 @@ d.displaydata();
 d.getdata();
 food s;
 s.fooddata();
+travel t;
+t.traveldata();
 
 return 0;
 
